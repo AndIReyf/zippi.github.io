@@ -1,0 +1,15 @@
+// Colors
+$viol: #62497c;
+$bg: #fefefe;
+$yellow: #ffe26d;
+$text: #040405;
+$grey: #efefef;
+
+// Mixins
+@mixin mont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin helv500 {
+  font-family: 'Helvetica Neue', sans-serif;
+}
