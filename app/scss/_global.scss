@@ -60,3 +60,18 @@ li{
 .title{
   font-size: 44px;
 }
+
+.link{
+  padding: 16px 26px;
+  background-color: $viol;
+  border-radius: 3px;
+  font-size: 10px;
+  transition: all .3s;
+  color: $bg;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $text;
+    background-color: $yellow;
+  }
+}
