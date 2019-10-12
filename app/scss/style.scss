@@ -17,6 +17,11 @@
   align-items: flex-end;
   padding-top: 40px;
   margin-bottom: 125px;
+
+  a {
+    text-transform: uppercase;
+    color: $bg;
+  }
 }
 
 .header__logo {
@@ -168,3 +173,172 @@
     margin-bottom: 30px;
   }
 }
+
+// Projects
+
+.projects__inner {
+  margin-bottom: 80px;
+}
+
+.projects__inner-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.wrapper__box {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.projects__box {
+  width: 25%;
+
+  &-images {
+    min-height: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+}
+
+.projects__box-content {
+  padding: 45px 30px 45px 40px;
+  background-color: $grey;
+  transition: all .3s;
+
+  &:hover {
+    background-color: $yellow;
+
+    a {
+      background-color: $viol;
+      color: $grey;
+      transition: all .3s;
+    }
+  }
+
+  &-title {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &-text {
+    font-size: 13px;
+    line-height: 23px;
+    @include helv500;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  &-link {
+    font-size: 10px;
+    color: #323232;
+    text-transform: uppercase;
+    background-color: $bg;
+    padding: 16px 23px;
+    border-radius: 3px;
+  }
+}
+
+// Pricing
+
+.pricing__title {
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+.pricing__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 85px;
+
+  &-content {
+    text-align: center;
+
+    &+.pricing__inner-content {
+      border-left: 2px solid #e7e7e7;
+      padding-left: 55px;
+    }
+
+    &-title {
+
+      margin-bottom: 15px;
+
+      span {
+        display: block;
+        text-transform: uppercase;
+        color: #9d9d9d;
+        margin-top: 20px;
+      }
+    }
+
+    &-info {
+      font-size: 10px;
+      line-height: 22px;
+      @include helv500;
+    }
+
+    &-link{
+      text-transform: uppercase;
+      padding: 9px 25px;
+      margin-top: 20px;
+    }
+  }
+}
+
+
+// Slider Popup
+
+.slider__popup{
+  background-color: $viol;
+  padding: 90px 0 115px;
+}
+
+.slider__popup-title{
+  color: #fff;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.slick-slide,
+.slick-current,
+.slick-active,
+.slick-center {
+  max-width: 690px;
+  width: 100%;
+  margin-right: 45px;
+}
+
+.card{
+  position: relative;
+
+  a::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/icon/play.svg);
+    width: 120px;
+    height: 120px;
+    top: 160px;
+    left: 280px;
+    z-index: 5;
+  }
+
+  img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 460px;
+  }
+
+  &-body{
+    display: flex;
+    justify-content: space-between;
+    color: #fefefe;
+    font-size: 11px;
+    margin-top: 20px;
+  }
+}
+
+
+@import 'media';

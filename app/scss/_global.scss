@@ -12,25 +12,31 @@ html {
 
 // Прижимаем footer к низу сайта
 html,
-body{
+body {
   width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
+
 // Внутри должен быть весь контент сайта кроме footer
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
+
 .content {
   flex: 1 0 auto;
 }
+
 // ===================
 .footer {
   flex: 0 0 auto;
 }
+
 //  ==================
 
-body{
+body {
   background-color: $bg;
   @include mont;
   font-weight: 700;
@@ -38,30 +44,35 @@ body{
   color: $text;
 }
 
-a{
+a {
   text-decoration: none;
   color: $text;
   display: inline-block;
 }
 
 ul,
-li{
+li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.container{
+.container {
   max-width: 710px;
   padding: 0px 10px;
   margin: 0 auto;
 }
 
-.title{
+.container-fluid {
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+.title {
   font-size: 44px;
 }
 
-.link{
+.link {
   padding: 16px 26px;
   background-color: $viol;
   border-radius: 3px;
