@@ -293,6 +293,7 @@
 .slider__popup{
   background-color: $viol;
   padding: 90px 0 115px;
+  border-bottom: 1px solid #a091b0;
 }
 
 .slider__popup-title{
@@ -301,14 +302,18 @@
   margin-bottom: 45px;
 }
 
-.slick-slide,
-.slick-current,
-.slick-active,
-.slick-center {
-  max-width: 690px;
-  width: 100%;
-  margin-right: 45px;
+
+.slider__content{
+  .slick-slide,
+  .slick-current,
+  .slick-active,
+  .slick-center {
+    max-width: 690px;
+    width: 100%;
+    margin-right: 45px;
+  }
 }
+
 
 .card{
   position: relative;
@@ -340,5 +345,132 @@
   }
 }
 
+
+// Team section
+
+.team{
+  padding: 75px 0 135px;
+}
+
+.team__title{
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.team__inner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.team__box{
+  max-width: 175px;
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+  position: relative;
+  
+    &-image{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    
+    
+    &:hover{
+      .team__box-image--links {
+        display: block;
+      }
+    }
+
+    &--links{
+      display: none;
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      border-radius: 50%;
+      width: 175px;
+      height: 175px;
+      background-color: rgba($viol, .6);
+      
+      li{
+        display: inline-block;
+        margin-top: 45%;
+        
+        &+li{
+          margin-left: 24px;
+        }
+      }
+    }
+  }
+
+  &-name{
+    margin-bottom: 13px;
+  }
+
+  &-profession{
+    font-weight: 500;
+  }
+}
+
+// slider life
+
+.slider__life{
+  padding: 80px 0 100px;
+  background-color: $grey;
+  border-bottom: 1px solid #e8e8e8;
+
+  &-title{
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+
+.slider__life-main{
+  margin-bottom: 14px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider__life-nav{
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  .slick-list.draggable{
+    padding: 0 54px;
+  }
+}
+
+
+
+.slick-prev,
+.slick-next{
+  position: absolute;
+  bottom: -86px;
+  padding: 0 9px;
+  font: 500 0px Arial;
+  z-index: 5;
+  border: 1px solid #ccc;
+  background-color: #2a2a2a;
+  height: 72px;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s;
+
+  &:hover{
+    background-color: $viol;
+  }
+}
+
+.slick-next{
+  right: 0;
+}
 
 @import 'media';
